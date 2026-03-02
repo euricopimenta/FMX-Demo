@@ -1,0 +1,127 @@
+object TesteMsgBox: TTesteMsgBox
+  Margins.Left = 8.000000000000000000
+  Margins.Top = 8.000000000000000000
+  Margins.Right = 8.000000000000000000
+  Margins.Bottom = 8.000000000000000000
+  Size.Width = 505.000000000000000000
+  Size.Height = 221.000000000000000000
+  Size.PlatformDefault = False
+  object lblMensagem: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 24.000000000000000000
+    Text = 'Mensagem'
+    TabOrder = 1
+  end
+  object edtMSG: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Position.X = 8.000000000000000000
+    Position.Y = 49.000000000000000000
+    Size.Width = 353.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object cmbTipo: TComboBox
+    Items.Strings = (
+      'Informa'#231#227'o'
+      'Aviso'
+      'Sucesso'
+      'Erro')
+    ItemIndex = 0
+    Position.X = 369.000000000000000000
+    Position.Y = 49.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+  end
+  object lblTipo: TLabel
+    Position.X = 369.000000000000000000
+    Position.Y = 24.000000000000000000
+    Text = 'Tipo de Aviso'
+    TabOrder = 0
+  end
+  object LytButtons: TLayout
+    Align = Bottom
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 163.000000000000000000
+    Size.Width = 489.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object RectBtnOk: TRectangle
+      Align = Right
+      Cursor = crHandPoint
+      Position.X = 376.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Thickness = 0.000000000000000000
+      XRadius = 12.000000000000000000
+      YRadius = 12.000000000000000000
+      OnClick = RectBtnOkClick
+      object BtnOkText: TLabel
+        Align = Client
+        Cursor = crHandPoint
+        StyledSettings = [Family, Style, FontColor]
+        Size.Width = 113.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 'Ok'
+        TabOrder = 0
+      end
+      object ShadowEffect3: TShadowEffect
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+        Trigger = 'IsMouseOver=true'
+        Enabled = False
+      end
+    end
+  end
+  object RectBtnGerar: TRectangle
+    Cursor = crHandPoint
+    Padding.Left = 8.000000000000000000
+    Padding.Top = 8.000000000000000000
+    Padding.Right = 8.000000000000000000
+    Padding.Bottom = 8.000000000000000000
+    Position.X = 369.000000000000000000
+    Position.Y = 79.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 42.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Thickness = 0.000000000000000000
+    XRadius = 12.000000000000000000
+    YRadius = 12.000000000000000000
+    OnClick = RectBtnGerarClick
+    object Label1: TLabel
+      Align = Client
+      Cursor = crHandPoint
+      StyledSettings = [Family, Style, FontColor]
+      Size.Width = 104.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.HorzAlign = Center
+      Text = 'Gerar'
+      TabOrder = 0
+    end
+    object ShadowEffect1: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.600000023841857900
+      ShadowColor = claBlack
+      Trigger = 'IsMouseOver=true'
+      Enabled = False
+    end
+  end
+end
