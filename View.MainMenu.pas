@@ -50,10 +50,23 @@ type
     Text7: TText;
     ShadowEffect9: TShadowEffect;
     lblAuthor: TLabel;
+    ControlsDragBar: TRectangle;
+    BtnRect_Close: TRectangle;
+    btnRect_Maximize: TRectangle;
+    btnRect_Minimize: TRectangle;
+    GlowEffect1: TGlowEffect;
+    GlowEffect2: TGlowEffect;
+    GlowEffect3: TGlowEffect;
     procedure Rectangle9Click(Sender: TObject);
     procedure btnSairClick(Sender: TObject);
     procedure btnClienteClick(Sender: TObject);
     procedure RectBtnTesteMsgClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure btnRect_MaximizeClick(Sender: TObject);
+    procedure BtnRect_CloseClick(Sender: TObject);
+    procedure btnRect_MinimizeClick(Sender: TObject);
+    procedure ControlsDragBarMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
   private
     { Private declarations }
   public
@@ -87,9 +100,40 @@ begin
   end;
 end;
 
+procedure TfrmMainMenu.BtnRect_CloseClick(Sender: TObject);
+begin
+  Self.Close;
+end;
+
+procedure TfrmMainMenu.btnRect_MaximizeClick(Sender: TObject);
+begin
+  If WindowState = TWindowState.wsMaximized then
+    WindowState := TWindowState.wsNormal
+  else
+    WindowState := TWindowState.wsMaximized;
+
+end;
+
+procedure TfrmMainMenu.btnRect_MinimizeClick(Sender: TObject);
+begin
+  WindowState := TWindowState.wsMinimized;
+end;
+
 procedure TfrmMainMenu.btnSairClick(Sender: TObject);
 begin
-  Close;
+  Self.Close;
+end;
+
+procedure TfrmMainMenu.ControlsDragBarMouseDown(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+begin
+  Self.StartWindowDrag;
+end;
+
+procedure TfrmMainMenu.FormCreate(Sender: TObject);
+begin
+  BorderStyle := TFmxFormBorderStyle.None;
+
 end;
 
 procedure TfrmMainMenu.LockPanels(AState: Boolean);
